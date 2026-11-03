@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Person interface {
 	getName() string
 	getAge() int
@@ -30,22 +28,34 @@ func (m Mage) getStats() int {
 	return m.intelligence
 }
 
-func GetInfo(p Person) int {
+func (h Hero) getName() string {
+	return h.name
+}
+func (h Hero) getAge() int {
+	return h.age
+}
+func (h Hero) getStats() int {
+	return h.Strength
+}
+
+func GetInfo(p Person) (string, int) {
 	m, ok := p.(Mage)
 	if ok {
 		intelligence := m.intelligence
-		fmt.Printf("This person has %v int!", intelligence)
-		return 1
+
+		return "This person is a mage!", intelligence
 	}
 	if !ok {
-		return 2
+		intelligence := 9
+		return "This person is not a mage!", intelligence
 	}
-	return 0
+	return "Error!", 0
 }
 
 func main() {
-	nerissa := Mage{name: "Nerrisa Ravencroft", age: 26, intelligence: 9}
-
+	nerissa := Mage{name: "Nerrisa Ravencroft", age: 26, intelligence: 19}
+	noel := Hero{name: "Noel Shirogane", age: 26, Strength: 19}
 	print(GetInfo(nerissa))
+	print(GetInfo(noel))
 
 }
