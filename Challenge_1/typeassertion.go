@@ -53,9 +53,11 @@ func GetInfo(p Person) (string, int) {
 }
 
 func main() {
-	nerissa := Mage{name: "Nerrisa Ravencroft", age: 26, intelligence: 19}
-	noel := Hero{name: "Noel Shirogane", age: 26, Strength: 19}
-	print(GetInfo(nerissa))
-	print(GetInfo(noel))
-
+	//nerissa := Mage{name: "Nerrisa Ravencroft", age: 26, intelligence: 19}
+	//noel := Hero{name: "Noel Shirogane", age: 26, Strength: 19}
+	//print(GetInfo(nerissa))
+	//print(GetInfo(noel))
+	SwitchingPractice(1)
+	SwitchingPractice("1")
+	SwitchingPractice(struct{}{})
 }
