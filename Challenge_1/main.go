@@ -1,9 +1,11 @@
 package main
 
+import "fmt"
+
 func main() {
 	nerissa := Mage{name: "Nerrisa Ravencroft", age: 26, intelligence: 19, mana_points: 50}
-	noel := Hero{name: "Noel Shirogane", age: 26, Strength: 19}
-	print(loops(nerissa))
-	print(GetInfo(noel))
+	GetInfo(nerissa)
+	spells := [2]string{"Doom", "Fireball"}
+	fmt.Println(getSpellCost(spells))
 
 }
