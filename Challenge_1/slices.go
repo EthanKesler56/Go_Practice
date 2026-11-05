@@ -1,10 +1,12 @@
 package main
 
-func getSpellCost(spells [2]string) []int {
-	spell_cost := make([]int, len(spells))
-	for i := 0; i < len(spell_cost); i++ {
-		spell_cost[i] = len(spells[i])
-	}
+func slice_test(test []int) []int {
+	new_slice := make([]int, len(test))
 
-	return spell_cost
+	for i := 0; i < len(test); i++ {
+		new_slice[i] = int(test[i])
+		new_slice[i] = new_slice[i] * 2
+
+	}
+	return new_slice
 }
