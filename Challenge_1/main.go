@@ -7,5 +7,7 @@ func main() {
 	GetInfo(nerissa)
 	num := []int{1, 2, 3, 4}
 	fmt.Println(slice_test(num))
+	slice_test_two()
+	fmt.Println(sliceOfSlices(5, 10))
 
 }
