@@ -25,3 +25,14 @@ func mapStruct() map[string]Mage {
 	return members
 
 }
+
+func countDistinctWords(messages []string) map[int]string {
+	//loop over each word in string.
+	count := make(map[int]string)
+	for i, message := range messages {
+		count[i] = message
+
+	}
+
+	return count
+}
