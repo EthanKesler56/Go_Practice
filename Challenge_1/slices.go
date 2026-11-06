@@ -10,3 +10,6 @@ func slice_test(test []int) []int {
 	}
 	return new_slice
 }
+
+func test(p Person) []struct {
+}
