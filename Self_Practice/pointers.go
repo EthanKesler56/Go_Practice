@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Mage struct {
 	name         string
@@ -11,7 +13,7 @@ func pointerPractice() {
 	p := 10
 	test := &p
 	print(test)
-	print("HERE", *test)
+	print("HERE", test)
 
 }
 
@@ -33,4 +35,24 @@ type Analytics struct {
 }
 
 type Message struct {
+	Recipient string
+	Success   bool
+}
+
+func HERE() {
+	var x int = 50
+	var y *int = &x
+	fmt.Printf("%v\n", x)
+	print(y)
+}
+
+// Dereferencing
+func DereferencePractice() {
+	myString := "hello"
+	myStringPtr := &myString
+	myStringPtrDeref := *myStringPtr
+	fmt.Printf("%v\n", myString)
+	fmt.Printf("%v\n", myStringPtr)
+	fmt.Printf("%v\n", myStringPtrDeref)
+
 }
