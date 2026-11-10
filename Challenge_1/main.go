@@ -1,15 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
+import "time"
 
-func send(ch chan int) {
-	ch <- 99
-}
-
-func main() {
-	ch := make(chan int)
-	go send(ch)
-	fmt.Println(<-ch)
+type text struct {
+	body string
+	date time.Time
 }
