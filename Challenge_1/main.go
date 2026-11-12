@@ -1,12 +1,5 @@
 package main
 
-<<<<<<< HEAD
-import "time"
-
-type text struct {
-	body string
-	date time.Time
-=======
 func main() {
 	sound_demon := idol{name: "Nerissa", age: 2500}
 	knight := idol{name: "Noel", age: 25}
@@ -18,5 +11,4 @@ func main() {
 		print(i)
 	}
 
->>>>>>> 80ad60e (Continued channels practice)
 }
